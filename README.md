@@ -21,7 +21,8 @@ You can import the GildedRose and Items class from the gilded_rose.py
 
 You will find tests in the test_gilded_rose.py file that you can run with the following command :
 
-python test_gilded_rose.py
+    python test_gilded_rose.py
 
 Finally you can observe the evolution of these items with the texttest_fixture.py script :
-python texttest_fixture.py
+    
+    python texttest_fixture.py
