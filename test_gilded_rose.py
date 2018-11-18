@@ -48,12 +48,12 @@ class GildedRoseTest(unittest.TestCase):
         gilded_rose.update_quality()
         self.assertEquals(50, items[0].quality)
     
-    #This test fails    
     def test_sulfuras(self):    
-        items = [Item("Sulfuras", 3, 40)]
+        items = [Item("Sulfuras, Hand of Ragnaros", 3, 40)]
         gilded_rose = GildedRose(items)
         gilded_rose.update_quality()
         self.assertEquals(40, items[0].quality)
+        self.assertEquals(3, items[0].sell_in)
 
     def test_backstage(self):
         days_left = [0,20,10,5] 
@@ -65,7 +65,13 @@ class GildedRoseTest(unittest.TestCase):
                 self.assertEquals(0, items[0].quality)
             else:
                 self.assertEquals(10+i, items[0].quality)
-        
+                
+    #Test conjured items
+    def test_conjured(self):
+        items = [Item("Conjured mana cake", 5, 5)]
+        gilded_rose = GildedRose(items)
+        gilded_rose.update_quality()
+        self.assertEquals(3, items[0].quality)  
         
 if __name__ == '__main__':
     unittest.main()
