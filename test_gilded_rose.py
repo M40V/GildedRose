@@ -68,10 +68,15 @@ class GildedRoseTest(unittest.TestCase):
                 
     #Test conjured items
     def test_conjured(self):
-        items = [Item("Conjured mana cake", 5, 5)]
-        gilded_rose = GildedRose(items)
-        gilded_rose.update_quality()
-        self.assertEquals(3, items[0].quality)  
+        days_left = [0, 0, 10]
+        quality = [10, 0, 10]
+        expected_quality = [6, 0, 8]
+        for i in range(0, len(days_left)):
+            items = [Item("Conjured mana cake", days_left[i], quality[i])]
+            gilded_rose = GildedRose(items)
+            gilded_rose.update_quality()
+            self.assertEquals(expected_quality[i], items[0].quality)  
+    
         
 if __name__ == '__main__':
     unittest.main()
