@@ -52,8 +52,8 @@ class GildedRoseTest(unittest.TestCase):
         items = [Item("Sulfuras, Hand of Ragnaros", 3, 40)]
         gilded_rose = GildedRose(items)
         gilded_rose.update_quality()
-        self.assertEquals(40, items[0].quality)
-        self.assertEquals(3, items[0].sell_in)
+        self.assertEquals(80, items[0].quality)
+        self.assertEquals("never", items[0].sell_in)
 
     def test_backstage(self):
         days_left = [0,20,10,5] 
