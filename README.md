@@ -1,6 +1,6 @@
 # GildedRose
 Gilded Rose Refactoring Kata Python
---------------------------------------------------------------------------------------
+###########################################################
 
 The Gilded Rose is a small inn with a prime location in a prominent city ran by a friendly innkeeper named Allison. They also buy and sell only the finest goods. Unfortunately, their goods are constantly degrading in quality as they approach their sell by date. They have a system in place that updates their inventory for them. Here an introduction to their system:
 
